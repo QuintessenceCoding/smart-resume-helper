@@ -51,7 +51,8 @@ const Portfolio = () => {
     setEnhancedDataToSave(null);
     const payload = { fullName: formData.name, professionalTitle: formData.title, email: formData.email, phone: formData.phone, aboutMe: formData.bio, skills: formData.skills, projects: projects.map(p => ({ projectName: p.name, projectURL: p.url, projectDescription: p.description, technologies: p.technologies })) };
     try {
-      const response = await fetch("http://localhost:8000/portfolio/enhance", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload) });
+      const apiUrl = `${import.meta.env.VITE_API_BASE_URL}/portfolio/enhance`;
+      const response = await fetch(apiUrl, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload) });
       if (!response.ok) { throw new Error(`HTTP error! status: ${response.status}`); }
       const enhancedData = await response.json();
       setEnhancedDataToSave(enhancedData);
@@ -79,7 +80,8 @@ const Portfolio = () => {
     }
 
     try {
-      const response = await fetch("http://localhost:8000/portfolio/save", {
+      const apiUrl = `${import.meta.env.VITE_API_BASE_URL}/portfolio/save`;
+      const response = await fetch(apiUrl, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -108,7 +110,8 @@ const Portfolio = () => {
     
     setIsLoadingPortfolios(true);
     try {
-      const response = await fetch("http://localhost:8000/portfolios/", {
+      const apiUrl = `${import.meta.env.VITE_API_BASE_URL}/portfolios/`;
+      const response = await fetch(apiUrl, {
         headers: { "Authorization": `Bearer ${token}` } // This sends the token
       });
       if (!response.ok) { throw new Error("Failed to fetch portfolios.") }
@@ -131,7 +134,8 @@ const Portfolio = () => {
     }
 
     try {
-      const response = await fetch(`http://localhost:8000/portfolios/${portfolioId}`, {
+      const apiUrl = `${import.meta.env.VITE_API_BASE_URL}/portfolios/${portfolioId}`;
+      const response = await fetch(apiUrl, {
         headers: { "Authorization": `Bearer ${token}` } // This sends the token
       });
       if (!response.ok) { throw new Error("Failed to load portfolio.") }

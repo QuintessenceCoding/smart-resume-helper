@@ -41,7 +41,8 @@ const Resume = () => {
     formData.append("resume_file", uploadedFile);
 
     try {
-      const response = await fetch("http://localhost:8000/resume/enhance", {
+      const apiUrl = `${import.meta.env.VITE_API_BASE_URL}/resume/enhance`;
+      const response = await fetch(apiUrl, {
         method: "POST",
         body: formData,
       });
