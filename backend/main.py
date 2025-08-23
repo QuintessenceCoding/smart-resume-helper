@@ -88,10 +88,10 @@ app = FastAPI()
 
 # --- CORS Middleware ---
 origins = [
-    "http://localhost:5173", 
+     "http://localhost:5173", 
     "http://localhost:3000", 
     "http://localhost:8080",
-    "smart-resume-helper-r5nx7cowr-ishika-vashishts-projects.vercel.app" 
+    "https://smart-resume-helper.vercel.app" 
 ]
 app.add_middleware(
     CORSMiddleware,
