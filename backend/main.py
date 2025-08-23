@@ -91,7 +91,7 @@ origins = [
     "http://localhost:5173", 
     "http://localhost:3000", 
     "http://localhost:8080",
-    "https://smart-resume-helper-jsj73smse-ishika-vashishts-projects.vercel.app" 
+    "smart-resume-helper-r5nx7cowr-ishika-vashishts-projects.vercel.app" 
 ]
 app.add_middleware(
     CORSMiddleware,
