@@ -2,7 +2,7 @@
 
 An intelligent, full-stack application designed to help students and professionals create, enhance, and showcase their career materials using AI. This tool provides AI-powered suggestions to improve resumes and generates beautiful, multi-themed portfolio websites in minutes.
 
-**[🔗 Live Demo Link](https://your-vercel-app-url.vercel.app)** <!-- Replace with your live Vercel URL -->
+**[🔗 Live Demo Link](https://smart-resume-helper.vercel.app/)** 
 
 ---
 
@@ -22,9 +22,8 @@ Here's a look at the application in action:
 
 | Landing Page | Resume Enhancer | Portfolio Builder |
 | :---: | :---: | :---: |
-| ![Landing Page](https://i.imgur.com/your-landing-page-image.png) | ![Resume Enhancer](https://i.imgur.com/your-resume-enhancer-image.png) | ![Portfolio Builder](https://i.imgur.com/your-portfolio-builder-image.png) |
+| ![Landing Page](./screenshots/landing_page.png) | ![Resume Enhancer](./screenshots/resume.jpeg) | ![Portfolio Builder](./screenshots/portfolio.jpeg) |
 
-<!-- Replace the imgur links with direct links to your uploaded screenshots -->
 
 ---
 
@@ -66,7 +65,7 @@ To get a local copy up and running, follow these simple steps.
 
 1.  **Clone the repository:**
     ```sh
-    git clone [https://github.com/your-username/smart-resume-helper.git](https://github.com/your-username/smart-resume-helper.git)
+    git clone https://github.com/QuintessenceCoding/smart-resume-helper.git
     cd smart-resume-helper
     ```
 
